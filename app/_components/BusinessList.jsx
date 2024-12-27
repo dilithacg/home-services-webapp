@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 function BusinessList({ businessList, title }) {
@@ -12,7 +13,8 @@ function BusinessList({ businessList, title }) {
       >
         {businessList.length > 0
           ? businessList.map((business, index) => (
-              <div
+              <Link
+                href={"/details/" + business.id}
                 key={index}
                 className="shadow-md rounded-lg
             cursor-pointer
@@ -45,7 +47,7 @@ function BusinessList({ businessList, title }) {
 
                   <Button className="rounded-lg mt-3">Book Now</Button>
                 </div>
-              </div>
+              </Link>
             ))
           : [1, 2, 3, 4, 5, 6, 7, 8].map((item, index) => (
               <div

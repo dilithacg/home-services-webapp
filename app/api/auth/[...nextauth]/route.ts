@@ -1,6 +1,7 @@
-import NextAuth from "next-auth/next";
+import NextAuth from "next-auth";
 import type { NextAuthOptions } from "next-auth";
 
+// Define your NextAuth options
 export const authOptions: NextAuthOptions = {
   providers: [
     {
@@ -11,7 +12,7 @@ export const authOptions: NextAuthOptions = {
       authorization: { params: { scope: "openid email profile" } },
       idToken: true,
       clientId: "P2ql9rZDt2Rfxwjx1W54jRSiRAid",
-      clientSecret: "<Descope Access Key>",
+      clientSecret: "<Descope Access Key>", // Replace with actual secret
       checks: ["pkce", "state"],
       profile(profile) {
         return {
@@ -25,6 +26,7 @@ export const authOptions: NextAuthOptions = {
   ],
 };
 
+// Export GET and POST methods for NextAuth
 const handler = NextAuth(authOptions);
 
 export { handler as GET, handler as POST };

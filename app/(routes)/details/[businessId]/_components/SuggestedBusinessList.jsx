@@ -35,6 +35,7 @@ function SuggestedBusinessList({ business }) {
           {businessList &&
             businessList.map((business, index) => (
               <Link
+                key={business.id}
                 href={"/details/" + business.id}
                 className="flex gap-2 mb-4
             hover:border rounded-lg p-2 border-primary

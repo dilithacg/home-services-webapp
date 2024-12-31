@@ -22,6 +22,5 @@ export const authOptions: NextAuthOptions = {
       },
     },
   ],
-  secret: process.env.NEXT_PUBLIC_MASTER_URL_KEY,
 };
 export default authOptions;

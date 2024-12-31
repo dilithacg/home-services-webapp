@@ -12,7 +12,7 @@ export const authOptions: NextAuthOptions = {
       authorization: { params: { scope: "openid email profile" } },
       idToken: true,
       clientId: "P2ql9rZDt2Rfxwjx1W54jRSiRAid",
-      clientSecret: "<Descope Access Key>", // Replace with actual secret
+      clientSecret: process.env.DESCOPE_CLIENT_SECRET, // Replace with actual secret
       checks: ["pkce", "state"],
       profile(profile) {
         return {

@@ -14,7 +14,7 @@ function CategoryList({ categoryList }) {
               href={"/search/" + category.name}
               key={category.id || `${category.name}-${category.icon.url}`}
               className="flex flex-col items-center justify-center gap-2
-              bg-purple-100 p-5 rounded-lg
+              bg-red-100 p-5 rounded-lg
               cursor-pointer hover:scale-110 transition-all ease-in-out"
             >
               <Image

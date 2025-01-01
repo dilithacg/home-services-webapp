@@ -35,11 +35,11 @@ function CategorySideBar() {
             href={"/search/" + category.name}
             key={index}
             className={`flex gap-2 p-3 border rounded-lg mb-3
-          md:mr-10 cursor-pointer hover:bg-purple-100 hover:text-primary
+          md:mr-10 cursor-pointer hover:bg-red-100 hover:text-primary
           hover:border-primary hover:shadow-md items-center
           ${
             selectedCategory == category.name &&
-            "border-primary text-primary shadow-md bg-purple-100"
+            "border-primary text-primary shadow-md bg-red-100"
           }
           
           `}

@@ -34,7 +34,7 @@ function BusinessList({ businessList, title }) {
             p-3 gap-1"
                 >
                   <h2
-                    className="p-1 bg-purple-200 text-primary
+                    className="p-1 bg-red-200 text-primary
               rounded-full px-2 text-[12px]"
                   >
                     {business.category.name}

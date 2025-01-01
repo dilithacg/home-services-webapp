@@ -18,7 +18,7 @@ function BusinessInfo({ business }) {
           <div className="flex flex-col mt-4 md:mt-0 items-baseline gap-3">
             <h2
               className="text-primary
-        bg-purple-100 rounded-full p-1 px-3 text-lg"
+        bg-red-100 rounded-full p-1 px-3 text-lg"
             >
               {business.category.name}
             </h2>

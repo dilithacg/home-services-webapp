@@ -1,6 +1,7 @@
 import { NextAuthOptions } from "next-auth";
 
 export const authOptions: NextAuthOptions = {
+  secret: process.env.NEXTAUTH_SECRET, // Add the secret here
   providers: [
     {
       id: "descope",
@@ -22,5 +23,7 @@ export const authOptions: NextAuthOptions = {
       },
     },
   ],
+  debug: process.env.NODE_ENV === "development", // Enable debug mode in development
 };
+
 export default authOptions;
